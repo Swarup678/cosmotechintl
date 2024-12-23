@@ -1,0 +1,205 @@
+$primary-color: #145874;
+
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  height: 100vh;
+  background: url('/images/blankpapers.avif') no-repeat center center;
+  background-size: cover;
+  color: $primary-color;
+  overflow: hidden;
+
+  flex-wrap: wrap; /* Allows content to wrap when in small screen */
+
+  .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .text-content {
+    flex: 1;
+    padding-right: 20px;
+    margin-top: -90px;
+    text-align: left;
+    max-width: 50%; /* Prevents overflow on smaller screens */
+
+    .intro {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: $primary-color;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      opacity: 0;
+    }
+
+    .underline{
+     text-decoration: none;
+    }
+
+    .description {
+      font-size: 1.3rem;
+      line-height: 1.5;
+      margin-bottom: 30px;
+      font-weight: 400;
+      opacity: 0.8;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 20px;
+
+      .primaryButton,
+      .secondaryButton {
+        padding: 12px 30px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration:none;
+        display: inline-block;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        color: $primary-color;
+        text-align: center;
+
+        &:hover {
+          transform: translateY(-5px);
+        }
+      }
+
+      .primaryButton {
+        background-color: #00aaff;
+        &:hover {
+          background-color: #0066cc;
+        }
+      }
+
+      .secondaryButton {
+        background-color: #f5f5f5;
+        color: #333;
+        &:hover {
+          background-color: #ddd;
+        }
+      }
+    }
+  }
+
+  .image-content {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    max-width: 50%; /* Prevents overflow on smaller screens */
+
+    .hero-image {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 10px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  // Media Queries for Responsiveness
+
+  @media (max-width: 1024px) {
+    padding: 40px;
+    .content-wrapper {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .text-content {
+      text-align: center;
+      margin-top:-20px;
+      max-width: 80%; /* Increase width for better readability on tablets */
+    }
+
+    .image-content {
+      max-width: 100%; /* Allow image to fill container */
+    }
+
+    .intro {
+      font-size: 2rem; /* Reduce font size for smaller screens */
+    }
+
+    .description {
+      font-size: 1.2rem; /* Adjust font size for smaller devices */
+    }
+
+    .buttons {
+      flex-direction: column;
+      gap: 15px;
+      .primaryButton, .secondaryButton {
+        width: 100%; /* Buttons should take full width on mobile */
+        padding: 15px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 20px; /* Reduce padding for smaller screens */
+    height: auto; /* Allow section to be dynamic on mobile screens */
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+
+    .content-wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .text-content {
+      max-width: 90%; /* More flexible text content */
+      padding-right: 0;
+      margin-bottom: 20px; /* Added spacing below text */
+    }
+
+    .image-content {
+      max-width: 100%;
+      margin-top: 20px;
+    }
+
+    .intro {
+      font-size: 1.8rem; /* Further reduce font size for mobile */
+    }
+
+    .description {
+      font-size: 1.1rem; /* Adjust font size for mobile devices */
+    }
+
+    .buttons {
+      flex-direction: column;
+      gap: 15px;
+      .primaryButton, .secondaryButton {
+        width: 100%; /* Buttons should take full width on mobile */
+        padding: 15px;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .intro {
+      font-size: 1.5rem; /* Decrease intro text size even more for very small screens */
+    }
+
+    .description {
+      font-size: 1rem; /* Adjust description font size */
+    }
+
+    .buttons {
+      .primaryButton, .secondaryButton {
+        padding: 12px;
+        font-size: 1rem; /* Smaller buttons on small screens */
+      }
+    }
+  }
+}
