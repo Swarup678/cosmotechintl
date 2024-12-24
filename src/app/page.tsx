@@ -5,7 +5,7 @@ import { Inter } from 'next/font/google';
 const inter = Inter({
   subsets: ['latin'],
   weight: ['400']
-});//8888jjj
+});
 
 export default function Home() {
   return (
