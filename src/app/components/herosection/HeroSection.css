@@ -5,7 +5,6 @@
   align-items: center;
   padding: 50px;
   height: 100vh;
-  background: url("/images/blankpapers.avif") no-repeat center center;
   background-size: cover;
   color: #145874;
   overflow: hidden;
@@ -22,7 +21,7 @@
 .hero .text-content {
   flex: 1;
   padding-right: 20px;
-  margin-top: -90px;
+  margin-top: -175px;
   text-align: left;
   max-width: 50%; /* Prevents overflow on smaller screens */
 }
@@ -85,6 +84,7 @@
   display: flex;
   justify-content: center;
   max-width: 50%; /* Prevents overflow on smaller screens */
+  margin-top: -175px;
 }
 .hero .image-content .hero-image {
   width: 100%;
