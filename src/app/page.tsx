@@ -1,20 +1,17 @@
+"use client";
+
 import HeroSection from "./components/herosection/HeroSection";
-import Navbar from "./components/navbar/navbar";
-import { Inter } from 'next/font/google';
-import './globals.css'
 import FeaturesSection from "./components/FeatureSection/FeatureSection";
-const inter = Inter({
-  subsets: ['latin'],
-  weight: ['400']
-});//8888jjj
+import { VoiceOFSuccess } from "./components/voiceofsucess/voiceofsuccess";
+import Contact from "./components/ContactUs/Contact";
 
 export default function Home() {
   return (
-    <div className={inter.className}
-    >
-      {/* <Navbar /> */}
-      <HeroSection/>
-      <FeaturesSection/>
+    <div>
+      <HeroSection />
+      <FeaturesSection />
+      <VoiceOFSuccess />
+      <Contact/>
     </div>
   );
 }

@@ -7,10 +7,10 @@ import Link from 'next/link'; // For navigation
 
 const FeaturesSection: React.FC = () => {
   return (
-    <section className="features-section">
+    <section className="features-section ">
       <motion.div
         className="container"
-        initial={{ opacity: 0 }}
+        initial={{ opacity: 0 }} 
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
