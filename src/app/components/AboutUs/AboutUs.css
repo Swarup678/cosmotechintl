@@ -20,105 +20,100 @@
 }
 /* Mission & Vision */
 .mission-vision {
-  padding: 60px 20px;
-  background-color: #f4f4f4;
   text-align: center;
   color: #333;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 1s ease, transform 1s ease;
-  animation: fadeIn 1s forwards;
-}
-.mission-vision h2 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-.mission-vision p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  max-width: 800px;
-  margin: 0 auto 30px;
-}
-
-/* Team Section */
-.team {
-  padding: 60px 20px;
-  background-color: #fff;
-  text-align: center;
-}
-.team h2 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 40px;
-}
-.team .team-members {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 1s ease, transform 1s ease;
-  animation: fadeIn 1s forwards;
-}
-.team .team-member {
-  width: 250px;
-  margin-bottom: 30px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.team .team-member:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-.team .team-member img {
+  height: 100vh;
   width: 100%;
-  height: auto;
-  border-radius: 50%;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
-.team .team-member h3 {
-  font-size: 1.5rem;
-  margin-top: 15px;
+.mission-vision .mission-vision-text {
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
 }
-.team .team-member p {
+.mission-vision .mission-vision-text h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+.mission-vision .mission-vision-text p {
+  text-shadow: 0px -2px 5px rgb(0, 0, 0), 0px 2px 5px rgb(0, 0, 0);
   font-size: 1.2rem;
-  color: #666;
+  font-weight: bold;
+  line-height: 2;
+  max-width: 800px;
+  text-align: justify;
+  color: white;
 }
 
 /* Expertise Section */
 .expertise {
-  padding: 60px 20px;
+  padding: 20px;
   background-color: #f4f4f4;
-  text-align: center;
 }
 .expertise h2 {
+  text-align: center;
   font-size: 2.5rem;
-  font-weight: bold;
   margin-bottom: 40px;
 }
 .expertise .tech-icons {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
 }
-.expertise .tech-icon {
-  width: 250px;
+.expertise .tech-icons .tech-icon {
+  flex: 1 1 calc(33.333% - 20px);
+  max-width: 25%;
+  box-sizing: border-box;
   text-align: center;
-  margin-bottom: 40px;
+  background: rgba(255, 255, 255, 0.8) url("/images/d.jpg") no-repeat;
+  background-size: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 480px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
-.expertise .tech-icon img {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 20px;
+.expertise .tech-icons .tech-icon .img-div {
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  position: relative;
+  padding: 20px;
+  border: 1px solid;
+  background-color: rgb(224, 209, 209);
 }
-.expertise .tech-icon h3 {
+.expertise .tech-icons .tech-icon .img-div img {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  z-index: 1;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.expertise .tech-icons .tech-icon h3 {
   font-size: 1.5rem;
-  margin-bottom: 10px;
+  color: #145874;
+  margin-bottom: 5px;
+  text-shadow: 0px -2px 5px rgb(0, 0, 0), 0px 2px 5px rgb(0, 0, 0);
 }
-.expertise .tech-icon p {
+.expertise .tech-icons .tech-icon p {
   font-size: 1.1rem;
-  color: #666;
+  color: #ffffff;
+  text-align: justify;
+  line-height: 1.8;
+  text-shadow: 0px -2px 5px rgb(0, 0, 0), 0px 2px 5px rgb(0, 0, 0);
+}
+.expertise .tech-icons .tech-icon:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive Styles */

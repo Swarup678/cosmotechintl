@@ -3,12 +3,18 @@ $primary-color: #145874;
 .nav-container {
     display: flex;
     justify-content: space-between;
-    border: 1px solid;
+    // border-bottom: 1px solid;   
     margin: 40px;
     padding: 10px 32px 10px 50px;
     border-radius: 40px;
-    box-shadow: -4px -4px 3px rgba(0, 0, 0, 0.15);
+    // background:linear-gradient(0deg, #cdcccb #000000);
+    box-shadow: 4px 4px 3px rgba(14, 11, 11, 0.15);
     // flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    // background-color: $primary-color ;
+    backdrop-filter: blur(50px);
 
     .logo-container {
         display: flex;
@@ -18,6 +24,10 @@ $primary-color: #145874;
         text-decoration: none;
         // border: 1px solid;
 
+        .logo{
+            width:48px;
+            height:48px;
+        }
         .logo-label {
             font-size: 2rem;
             font-weight: 700;
@@ -34,10 +44,21 @@ $primary-color: #145874;
         .links {
             text-decoration: none;
             font-size: 18px;
-            color: #000;
+            color: #181717;
             padding: 0.5rem 2rem;
 
         }
+
+        .links:nth-child(5){
+            background-color: $primary-color;
+            border-radius: 40px;
+            color:white;
+            &:hover{
+                background-color: #0f4056;
+                
+            }
+        }
+
 
         .links:hover {
             background-color: $primary-color;

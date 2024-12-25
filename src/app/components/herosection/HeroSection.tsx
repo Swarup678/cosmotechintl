@@ -17,7 +17,7 @@ const HeroSection: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: 'easeOut' }}
           >
-            Empowering your business with cutting-edge technology
+           Turning Your Tech Woes Into Wows-One Click at a Time!
           </motion.p>
 
           <motion.p
@@ -26,26 +26,26 @@ const HeroSection: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3, ease: 'easeOut' }}
           >
-            At CosmoTech, we specialize in delivering innovative, tailored solutions that drive growth and transform businesses.
+            At CosmoTech, we’re the caffeine your business needs—always awake, always ahead. Fixing bugs, building solutions, or making tech behave, we turn ‘oh no’ into ‘oh wow!’ Let’s rewrite your story, minus the errors!
           </motion.p>
 
           <div className="buttons">
             <motion.div
-              className="primaryButton"
+              className="secondaryButton"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.6, ease: 'easeOut' }}
             >
-              <Link href="#about" className='underline'>Learn More</Link>
+              <Link href="#about" className='learn-more'>Learn More</Link>
             </motion.div>
 
             <motion.div
-              className="secondaryButton"
+              className="primaryButton"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.8, ease: 'easeOut' }}
             >
-              <Link href="#services" className='underline'>Explore Services</Link>
+              <Link href="#services" className='explore-services'>Explore Services</Link>
             </motion.div>
           </div>
         </div>
@@ -53,15 +53,23 @@ const HeroSection: React.FC = () => {
         {/* Image Content */}
         <motion.div
           className="image-content"
-          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, ease: 'easeOut' }}
+          initial={{ opacity: 0, y: 0 }}
+          animate={{ opacity: 1, y: [ 0, -10, 10, 0 ] }}
+          transition={{
+            y:{
+            duration: 3, 
+            repeat: Infinity,
+            repeatType: "loop",
+            ease: "easeInOut",
+          }
+          }}
+          // transition={{ duration: 1, ease: 'easeOut' }}
         >
           <Image
-            src="/images/maccode.avif"
+            src="/images/astronaut.png"
             alt="Tech Illustration"
             width={500}
-            height={400}
+            height={500}
             className="hero-image"
           />
         </motion.div>

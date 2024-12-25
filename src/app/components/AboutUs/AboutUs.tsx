@@ -4,70 +4,86 @@ import "./AboutUs.css";
 const AboutUs = () => {
   return (
     <div className="about-us-container">
-      {/* Hero Section */}
 
       {/* Mission & Vision */}
-      <section className="mission-vision">
-        <h2>Our Mission</h2>
-        <p>
-          At CosmoTech International, we are driven by a passion to innovate and
-          provide technology solutions that drive growth, efficiency, and
-          transformation. Our mission is to empower businesses to reach their
-          full potential.
-        </p>
-
-        <h2>Our Vision</h2>
-        <p>
-          We aim to be a global leader in tech solutions, shaping the future
-          with sustainable, cutting-edge technologies. Together, we will build a
-          smarter, more efficient world.
-        </p>
-      </section>
-
-      {/* Team Section */}
-      <section className="team">
-        <h2>Meet Our Team</h2>
-        <div className="team-members">
-          <div className="team-member">
-            <img src="/images/team1.jpg" alt="Team Member 1" />
-            <h3>John Doe</h3>
-            <p>CEO & Founder</p>
+      <section
+        className="mission-vision"
+        style={{
+          background: 'linear-gradient(to top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url("/images/growth.jpg") no-repeat',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center center',
+        }}>
+        <div className="mission-vision-text">
+          <div className="mission">
+            <h2>Our Mission</h2>
+            <p>
+              At Cosmotech International, we are driven by a passion to innovate and
+              provide technology solutions that drive growth, efficiency, and
+              transformation. Our mission is to empower businesses to reach their
+              full potential.
+            </p>
           </div>
-          <div className="team-member">
-            <img src="/images/team2.jpg" alt="Team Member 2" />
-            <h3>Jane Smith</h3>
-            <p>CTO</p>
-          </div>
-          <div className="team-member">
-            <img src="/images/team3.jpg" alt="Team Member 3" />
-            <h3>Mike Johnson</h3>
-            <p>Lead Developer</p>
+
+          <div className="vision">
+            <h2>Our Vision</h2>
+            <p>
+              We aim to be a global leader in tech solutions, shaping the future
+              with sustainable, cutting-edge technologies. Together, we will build a
+              smarter, more efficient world.
+            </p>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Expertise Section */}
-      <section className="expertise">
+      < section className="expertise" >
         <h2>Our Expertise</h2>
         <div className="tech-icons">
           <div className="tech-icon">
-            <img src="/images/ai-icon.png" alt="AI" />
-            <h3>AI & Machine Learning</h3>
-            <p>Developing intelligent systems for real-time problem solving.</p>
+            <div className="img-div">
+              <img src="/images/app-development.png" alt="movile-app-development" />
+            </div>
+            <h3>Mobile Apps Development</h3>
+            <p>Android, iOS, cross-platform solutions, The mobile development team of Infinite IT Solutions Nepal has built various apps. We help you build or update and make your web application a mobile experience you can be excited about and that users will love.</p>
           </div>
           <div className="tech-icon">
-            <img src="/images/cloud-icon.png" alt="Cloud" />
-            <h3>Cloud Solutions</h3>
-            <p>Cloud computing for flexible, scalable, and secure applications.</p>
+            <div className="img-div">
+              <img src="/images/web-development.png" alt="web-development" />
+            </div>
+            <h3>Web Development</h3>
+            <p>Our web developers can write, well-documented, modular, responsive code, effectively and efficiently in a diverse array of stacks, platforms, and frameworks. Our web developers dedicate themselves to the highest quality engineering.</p>
           </div>
           <div className="tech-icon">
-            <img src="/images/blockchain-icon.png" alt="Blockchain" />
-            <h3>Blockchain</h3>
-            <p>Decentralized solutions for transparent and secure transactions.</p>
+            <div className="img-div">
+              <img src="/images/software development.png" alt="software-development" />
+            </div>
+            <h3>Software Development</h3>
+            <p>We offer eCommerce development experience building responsive websites allows us to offer a range of custom web and mobile solutions for online businesses. With the right eCommerce website, we can help you increase leads, conversions, and sales.</p>
+          </div>
+          <div className="tech-icon">
+            <div className="img-div">
+              <img src="/images/testing.png" alt="testing" />
+            </div>
+            <h3>Testing and QA</h3>
+            <p>Infinte IT Solutions Nepal's QA experts will help you establish robust testing processes, increase product quality and optimize software development lifecycle. We will ensure your software is secure, reliable, scalable and delivers a seamless customer experience.</p>
+          </div>
+          <div className="tech-icon">
+            <div className="img-div">
+              <img src="/images/cloud-deployment.png" alt="cloud deplpoyment" />
+            </div>
+            <h3>Cloud Deployment</h3>
+            <p>We offer full-cycle cloud development services, including cloud infrastructure setup, migration, cloud application development, and cloud platforms.</p>
+          </div>
+          <div className="tech-icon">
+            <div className="img-div">
+              <img src="/images/ui-ux.png" alt="ui-ux" />
+            </div>
+            <h3>UI/UX Design</h3>
+            <p>In web design, form and function should be in harmony. We believe in human-centered customer experiences across any ecosystem of digital products being developed, technology transformation or marketing efforts. Simply put, we design & build application interfaces that just work.</p>
           </div>
         </div>
       </section>
-    </div>
+    </div >
   );
 };
 

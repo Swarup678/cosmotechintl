@@ -18,6 +18,7 @@ $secondary-color: #00aaff;
     opacity: 0;
     transform: translateY(50px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -26,118 +27,115 @@ $secondary-color: #00aaff;
 
 /* Mission & Vision */
 .mission-vision {
-  padding: 60px 20px;
-  background-color: #f4f4f4;
   text-align: center;
   color: #333;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 1s ease, transform 1s ease;
-  animation: fadeIn 1s forwards;
+  height: 100vh;
+  width: 100%;
 
-  h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-
-  p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto 30px;
-  }
-}
-
-/* Team Section */
-.team {
-  padding: 60px 20px;
-  background-color: #fff;
-  text-align: center;
-
-  h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 40px;
-  }
-
-  .team-members {
+  .mission-vision-text {
+    height: 100vh;
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s ease, transform 1s ease;
-    animation: fadeIn 1s forwards;
-  }
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
 
-  .team-member {
-    width: 250px;
-    margin-bottom: 30px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-    &:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    img {
-      width: 100%;
-      height: auto;
-      border-radius: 50%;
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    h3 {
-      font-size: 1.5rem;
-      margin-top: 15px;
+    h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     }
 
     p {
+      text-shadow:
+        0px -2px 5px rgba(0, 0, 0, 1),
+        0px 2px 5px rgba(0, 0, 0, 1);
       font-size: 1.2rem;
-      color: #666;
+      font-weight: bold;
+      line-height: 2;
+      max-width: 800px;
+      text-align: justify;
+      color: white;
     }
+
   }
 }
 
 /* Expertise Section */
 .expertise {
-  padding: 60px 20px;
+  padding: 20px;
   background-color: #f4f4f4;
-  text-align: center;
 
   h2 {
+    text-align: center;
     font-size: 2.5rem;
-    font-weight: bold;
     margin-bottom: 40px;
   }
 
   .tech-icons {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
-  }
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
 
-  .tech-icon {
-    width: 250px;
-    text-align: center;
-    margin-bottom: 40px;
+    .tech-icon {
+      flex: 1 1 calc(33.333% - 20px);
+      max-width: 25%;
+      box-sizing: border-box;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.8) url('/images/d.jpg') no-repeat;
+      background-size: cover;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      height: 480px;
+      padding: 30px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
 
-    img {
-      width: 80px;
-      height: 80px;
-      margin-bottom: 20px;
+      .img-div {
+        display: flex;
+        align-items: center;
+        border-radius: 50%;
+        position: relative;
+        padding: 20px;
+        border: 1px solid;
+        background-color: rgb(224, 209, 209);
+
+        img {
+          width: 70px;
+          height: 70px;
+          position: relative;
+          z-index: 1;
+          object-fit: contain;
+        }
+      }
+      
+      h3 {
+        font-size: 1.5rem;
+        color: $primary-color;
+        margin-bottom: 5px;
+        text-shadow:
+          0px -2px 5px rgba(0, 0, 0, 1),
+          0px 2px 5px rgba(0, 0, 0, 1);
+      }
+
+      p {
+        font-size: 1.1rem;
+        color: #ffffff;
+        text-align: justify;
+        line-height: 1.8;
+        text-shadow:
+          0px -2px 5px rgba(0, 0, 0, 1),
+          0px 2px 5px rgba(0, 0, 0, 1);
+      }
     }
 
-    h3 {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 1.1rem;
-      color: #666;
+    .tech-icon:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     }
   }
 }

@@ -1,8 +1,6 @@
 import './navbar.css';
 import Link from 'next/link';
-import { AiOutlineWeiboCircle } from "react-icons/ai";
 import Image from 'next/image';
-// import Cosmotech from "/assets/cosmotech.png";
 
 interface link {
     name: string;
@@ -35,7 +33,7 @@ export default function navbar() {
                 href="/">
                 <Image
                     className='logo'
-                    src="/assets/cosmotech.png"
+                    src="/assets/cosmotech1.png"
                     width={55}
                     height={55}
                     alt="Cosmotech" />

@@ -5,15 +5,20 @@
   align-items: center;
   padding: 50px;
   height: 100vh;
+  background: url("/images/sky.png") no-repeat;
   background-size: cover;
-  color: #145874;
+  -webkit-backdrop-filter: brightness(5%) saturate(80%);
+          backdrop-filter: brightness(5%) saturate(80%);
+  color: rgb(20, 88, 116);
   overflow: hidden;
-  flex-wrap: wrap; /* Allows content to wrap when in small screen */
+  flex-wrap: wrap;
+  /* Allows content to wrap when in small screen */
 }
 .hero .content-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
   width: 100%;
   gap: 30px;
   flex-wrap: wrap;
@@ -23,22 +28,24 @@
   padding-right: 20px;
   margin-top: -175px;
   text-align: left;
-  max-width: 50%; /* Prevents overflow on smaller screens */
+  max-width: 50%;
+  /* Prevents overflow on smaller screens */
 }
 .hero .text-content .intro {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #145874;
+  color: white;
   letter-spacing: 1px;
+  line-height: 1.5;
   text-transform: uppercase;
+  text-align: justify;
   margin-bottom: 15px;
   opacity: 0;
 }
-.hero .text-content .underline {
-  text-decoration: none;
-}
 .hero .text-content .description {
+  color: white;
   font-size: 1.3rem;
+  text-align: justify;
   line-height: 1.5;
   margin-bottom: 30px;
   font-weight: 400;
@@ -52,45 +59,58 @@
 .hero .text-content .buttons .secondaryButton {
   padding: 12px 30px;
   font-size: 1.1rem;
-  font-weight: 600;
-  border-radius: 5px;
+  font-weight: bold;
+  border-radius: 10px;
+  letter-spacing: 1.5px;
   cursor: pointer;
-  text-decoration: none;
   display: inline-block;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  color: #145874;
+  transition: 0.3s ease, transform 0.3s ease;
   text-align: center;
+  border: 1px solid rgb(20, 88, 116);
 }
 .hero .text-content .buttons .primaryButton:hover,
 .hero .text-content .buttons .secondaryButton:hover {
   transform: translateY(-5px);
-}
-.hero .text-content .buttons .primaryButton {
-  background-color: #00aaff;
-}
-.hero .text-content .buttons .primaryButton:hover {
-  background-color: #0066cc;
-}
-.hero .text-content .buttons .secondaryButton {
-  background-color: #f5f5f5;
-  color: #333;
+  color: white;
 }
 .hero .text-content .buttons .secondaryButton:hover {
-  background-color: #ddd;
+  background-color: rgba(20, 88, 116, 0.8);
+}
+.hero .text-content .buttons .secondaryButton .learn-more {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: light;
+}
+.hero .text-content .buttons .primaryButton {
+  background-color: rgb(20, 88, 116);
+  color: white;
+}
+.hero .text-content .buttons .primaryButton:hover {
+  background-color: #0f4056;
+}
+.hero .text-content .buttons .primaryButton:hover .explore-services {
+  color: rgb(238, 235, 235);
+}
+.hero .text-content .buttons .primaryButton .explore-services {
+  text-decoration: none;
+  color: white;
 }
 .hero .image-content {
   flex: 1;
   text-align: center;
   display: flex;
   justify-content: center;
-  max-width: 50%; /* Prevents overflow on smaller screens */
+  position: absolute;
+  left: 60%;
+  max-width: 50%;
+  /* Prevents overflow on smaller screens */
   margin-top: -175px;
 }
 .hero .image-content .hero-image {
   width: 100%;
   max-width: 500px;
   border-radius: 10px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transform: rotate(10deg);
 }
 @media (max-width: 1024px) {
   .hero {
@@ -105,30 +125,38 @@
   .hero .text-content {
     text-align: center;
     margin-top: -20px;
-    max-width: 80%; /* Increase width for better readability on tablets */
+    max-width: 80%;
+    /* Increase width for better readability on tablets */
   }
   .hero .image-content {
-    max-width: 100%; /* Allow image to fill container */
+    max-width: 100%;
+    /* Allow image to fill container */
   }
   .hero .intro {
-    font-size: 2rem; /* Reduce font size for smaller screens */
+    font-size: 2rem;
+    /* Reduce font size for smaller screens */
   }
   .hero .description {
-    font-size: 1.2rem; /* Adjust font size for smaller devices */
+    font-size: 1.2rem;
+    /* Adjust font size for smaller devices */
   }
   .hero .buttons {
     flex-direction: column;
     gap: 15px;
   }
-  .hero .buttons .primaryButton, .hero .buttons .secondaryButton {
-    width: 100%; /* Buttons should take full width on mobile */
+  .hero .buttons .primaryButton,
+  .hero .buttons .secondaryButton {
+    width: 100%;
+    /* Buttons should take full width on mobile */
     padding: 15px;
   }
 }
 @media (max-width: 768px) {
   .hero {
-    padding: 20px; /* Reduce padding for smaller screens */
-    height: auto; /* Allow section to be dynamic on mobile screens */
+    padding: 20px;
+    /* Reduce padding for smaller screens */
+    height: auto;
+    /* Allow section to be dynamic on mobile screens */
     flex-direction: column;
     text-align: center;
     justify-content: center;
@@ -138,38 +166,48 @@
     align-items: center;
   }
   .hero .text-content {
-    max-width: 90%; /* More flexible text content */
+    max-width: 90%;
+    /* More flexible text content */
     padding-right: 0;
-    margin-bottom: 20px; /* Added spacing below text */
+    margin-bottom: 20px;
+    /* Added spacing below text */
   }
   .hero .image-content {
     max-width: 100%;
     margin-top: 20px;
   }
   .hero .intro {
-    font-size: 1.8rem; /* Further reduce font size for mobile */
+    font-size: 1.8rem;
+    /* Further reduce font size for mobile */
   }
   .hero .description {
-    font-size: 1.1rem; /* Adjust font size for mobile devices */
+    font-size: 1.1rem;
+    /* Adjust font size for mobile devices */
   }
   .hero .buttons {
     flex-direction: column;
     gap: 15px;
   }
-  .hero .buttons .primaryButton, .hero .buttons .secondaryButton {
-    width: 100%; /* Buttons should take full width on mobile */
+  .hero .buttons .primaryButton,
+  .hero .buttons .secondaryButton {
+    width: 100%;
+    /* Buttons should take full width on mobile */
     padding: 15px;
   }
 }
 @media (max-width: 480px) {
   .hero .intro {
-    font-size: 1.5rem; /* Decrease intro text size even more for very small screens */
+    font-size: 1.5rem;
+    /* Decrease intro text size even more for very small screens */
   }
   .hero .description {
-    font-size: 1rem; /* Adjust description font size */
+    font-size: 1rem;
+    /* Adjust description font size */
   }
-  .hero .buttons .primaryButton, .hero .buttons .secondaryButton {
+  .hero .buttons .primaryButton,
+  .hero .buttons .secondaryButton {
     padding: 12px;
-    font-size: 1rem; /* Smaller buttons on small screens */
+    font-size: 1rem;
+    /* Smaller buttons on small screens */
   }
 }/*# sourceMappingURL=HeroSection.css.map */

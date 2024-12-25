@@ -1,4 +1,4 @@
-$primary-color: #145874;
+$primary-color: rgb(20, 88, 116);
 
 .hero {
   position: relative;
@@ -7,17 +7,21 @@ $primary-color: #145874;
   align-items: center;
   padding: 50px;
   height: 100vh;
-//   background: url('/images/blankpapers.avif') no-repeat center center;
+  background: url('/images/sky.png') no-repeat;
   background-size: cover;
+  backdrop-filter: brightness(5%) saturate(80%);
+  // backdrop-filter: contrast(10%);
   color: $primary-color;
   overflow: hidden;
-
-  flex-wrap: wrap; /* Allows content to wrap when in small screen */
+  // border: 1px solid;
+  flex-wrap: wrap;
+  /* Allows content to wrap when in small screen */
 
   .content-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     width: 100%;
     gap: 30px;
     flex-wrap: wrap;
@@ -28,24 +32,27 @@ $primary-color: #145874;
     padding-right: 20px;
     margin-top: -175px;
     text-align: left;
-    max-width: 50%; /* Prevents overflow on smaller screens */
+    max-width: 50%;
+    /* Prevents overflow on smaller screens */
 
     .intro {
       font-size: 2.5rem;
       font-weight: 700;
-      color: $primary-color;
+      color: white;
       letter-spacing: 1px;
+      line-height: 1.5;
       text-transform: uppercase;
+      text-align: justify;
       margin-bottom: 15px;
       opacity: 0;
     }
 
-    .underline{
-     text-decoration: none;
-    }
+
 
     .description {
+      color: white;
       font-size: 1.3rem;
+      text-align: justify;
       line-height: 1.5;
       margin-bottom: 30px;
       font-weight: 400;
@@ -60,32 +67,48 @@ $primary-color: #145874;
       .secondaryButton {
         padding: 12px 30px;
         font-size: 1.1rem;
-        font-weight: 600;
-        border-radius: 5px;
+        font-weight: bold;
+        border-radius: 10px;
+        letter-spacing: 1.5px;
         cursor: pointer;
-        text-decoration:none;
         display: inline-block;
-        transition: background-color 0.3s ease, transform 0.3s ease;
-        color: $primary-color;
+        transition: 0.3s ease, transform 0.3s ease;
         text-align: center;
+        border: 1px solid $primary-color;
 
         &:hover {
           transform: translateY(-5px);
+          color: white;
         }
       }
-
-      .primaryButton {
-        background-color: #00aaff;
-        &:hover {
-          background-color: #0066cc;
-        }
-      }
-
+      
       .secondaryButton {
-        background-color: #f5f5f5;
-        color: #333;
         &:hover {
-          background-color: #ddd;
+          background-color: rgba(20, 88, 116, 0.8);
+        }
+        
+        .learn-more {
+          text-decoration: none;
+          color: rgb(255, 255, 255);
+          font-weight: light;
+        }
+      }
+      
+      .primaryButton {
+        background-color: $primary-color;
+        color: white;
+        
+        &:hover {
+          background-color: #0f4056;
+        }
+
+        &:hover .explore-services {
+          color: rgb(238, 235, 235);
+        }
+
+        .explore-services {
+          text-decoration: none;
+          color: white;
         }
       }
     }
@@ -96,13 +119,18 @@ $primary-color: #145874;
     text-align: center;
     display: flex;
     justify-content: center;
-    max-width: 50%; /* Prevents overflow on smaller screens */
+    position: absolute;
+    left: 60%;
+    max-width: 50%;
+    /* Prevents overflow on smaller screens */
     margin-top: -175px;
+
     .hero-image {
       width: 100%;
       max-width: 500px;
       border-radius: 10px;
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+      transform:  rotate(10deg);
+      // box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
     }
   }
 
@@ -110,6 +138,7 @@ $primary-color: #145874;
 
   @media (max-width: 1024px) {
     padding: 40px;
+
     .content-wrapper {
       flex-direction: column;
       justify-content: center;
@@ -119,35 +148,44 @@ $primary-color: #145874;
 
     .text-content {
       text-align: center;
-      margin-top:-20px;
-      max-width: 80%; /* Increase width for better readability on tablets */
+      margin-top: -20px;
+      max-width: 80%;
+      /* Increase width for better readability on tablets */
     }
 
     .image-content {
-      max-width: 100%; /* Allow image to fill container */
+      max-width: 100%;
+      /* Allow image to fill container */
     }
 
     .intro {
-      font-size: 2rem; /* Reduce font size for smaller screens */
+      font-size: 2rem;
+      /* Reduce font size for smaller screens */
     }
 
     .description {
-      font-size: 1.2rem; /* Adjust font size for smaller devices */
+      font-size: 1.2rem;
+      /* Adjust font size for smaller devices */
     }
 
     .buttons {
       flex-direction: column;
       gap: 15px;
-      .primaryButton, .secondaryButton {
-        width: 100%; /* Buttons should take full width on mobile */
+
+      .primaryButton,
+      .secondaryButton {
+        width: 100%;
+        /* Buttons should take full width on mobile */
         padding: 15px;
       }
     }
   }
 
   @media (max-width: 768px) {
-    padding: 20px; /* Reduce padding for smaller screens */
-    height: auto; /* Allow section to be dynamic on mobile screens */
+    padding: 20px;
+    /* Reduce padding for smaller screens */
+    height: auto;
+    /* Allow section to be dynamic on mobile screens */
     flex-direction: column;
     text-align: center;
     justify-content: center;
@@ -158,9 +196,11 @@ $primary-color: #145874;
     }
 
     .text-content {
-      max-width: 90%; /* More flexible text content */
+      max-width: 90%;
+      /* More flexible text content */
       padding-right: 0;
-      margin-bottom: 20px; /* Added spacing below text */
+      margin-bottom: 20px;
+      /* Added spacing below text */
     }
 
     .image-content {
@@ -169,18 +209,23 @@ $primary-color: #145874;
     }
 
     .intro {
-      font-size: 1.8rem; /* Further reduce font size for mobile */
+      font-size: 1.8rem;
+      /* Further reduce font size for mobile */
     }
 
     .description {
-      font-size: 1.1rem; /* Adjust font size for mobile devices */
+      font-size: 1.1rem;
+      /* Adjust font size for mobile devices */
     }
 
     .buttons {
       flex-direction: column;
       gap: 15px;
-      .primaryButton, .secondaryButton {
-        width: 100%; /* Buttons should take full width on mobile */
+
+      .primaryButton,
+      .secondaryButton {
+        width: 100%;
+        /* Buttons should take full width on mobile */
         padding: 15px;
       }
     }
@@ -188,17 +233,22 @@ $primary-color: #145874;
 
   @media (max-width: 480px) {
     .intro {
-      font-size: 1.5rem; /* Decrease intro text size even more for very small screens */
+      font-size: 1.5rem;
+      /* Decrease intro text size even more for very small screens */
     }
 
     .description {
-      font-size: 1rem; /* Adjust description font size */
+      font-size: 1rem;
+      /* Adjust description font size */
     }
 
     .buttons {
-      .primaryButton, .secondaryButton {
+
+      .primaryButton,
+      .secondaryButton {
         padding: 12px;
-        font-size: 1rem; /* Smaller buttons on small screens */
+        font-size: 1rem;
+        /* Smaller buttons on small screens */
       }
     }
   }
