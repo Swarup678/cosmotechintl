@@ -8,7 +8,6 @@ import Link from 'next/link'; // For navigation
 const FeaturesSection: React.FC = () => {
   return (
     <section className="features-section">
-
       <h2 className="section-title">Why Choose Cosmotech ?</h2>
       <div className="features-cards">
         {/* Card 1 */}
