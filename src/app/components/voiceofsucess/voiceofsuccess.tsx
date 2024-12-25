@@ -5,7 +5,7 @@ import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
 
 export function VoiceOFSuccess() {
   return (
-    <div className="h-[40rem] w-full relative flex flex-col items-center justify-center overflow-hidden">
+    <div className="h-[42rem] w-full relative flex flex-col items-center justify-center overflow-hidden">
       {/* Gradient Background */}
       <div
         className="absolute inset-0 bg-gradient-to-r from-black/[0.3] via-[#145874] to-black/[0.3] z-0"
