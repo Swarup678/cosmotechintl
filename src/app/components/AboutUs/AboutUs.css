@@ -2,37 +2,30 @@
 .about-us-container {
   width: 100%;
   font-family: "Arial", sans-serif;
-  margin: 0;
-  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
-/* Hero Section */
-/* Fade-in Animation */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 /* Mission & Vision */
 .mission-vision {
-  text-align: center;
   color: #333;
   height: 100vh;
   width: 100%;
 }
 .mission-vision .mission-vision-text {
   height: 100vh;
+  position: relative;
+  z-index: 1;
+  border: 1px solid white;
   display: flex;
   justify-content: space-evenly;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
 }
 .mission-vision .mission-vision-text h2 {
+  text-align: center;
   font-size: 2.5rem;
   font-weight: bold;
   color: white;
@@ -50,13 +43,14 @@
 
 /* Expertise Section */
 .expertise {
-  padding: 20px;
-  background-color: #f4f4f4;
+  margin-bottom: 20px;
 }
 .expertise h2 {
   text-align: center;
   font-size: 2.5rem;
-  margin-bottom: 40px;
+  font-weight: bold;
+  margin: 20px 0;
+  color: #145874;
 }
 .expertise .tech-icons {
   display: flex;
@@ -75,11 +69,15 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   transition: transform 0.3s, box-shadow 0.3s;
-  height: 480px;
+  height: 430px;
   padding: 30px;
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+.expertise .tech-icons .tech-icon .img-div,
+.expertise .tech-icons .tech-icon h3 {
+  margin-bottom: 10px;
 }
 .expertise .tech-icons .tech-icon .img-div {
   display: flex;
@@ -99,13 +97,13 @@
      object-fit: contain;
 }
 .expertise .tech-icons .tech-icon h3 {
-  font-size: 1.5rem;
+  font-size: 26px;
   color: #145874;
   margin-bottom: 5px;
   text-shadow: 0px -2px 5px rgb(0, 0, 0), 0px 2px 5px rgb(0, 0, 0);
 }
 .expertise .tech-icons .tech-icon p {
-  font-size: 1.1rem;
+  font-size: 16px;
   color: #ffffff;
   text-align: justify;
   line-height: 1.8;

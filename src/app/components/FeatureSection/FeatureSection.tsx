@@ -45,7 +45,7 @@ const FeaturesSection: React.FC = () => {
       </div>
 
       <div className="cta">
-        <Link href="#contact" className='cta-button primary'>
+        <Link href="#contact" className='cta-button'>
           Get in Touch
         </Link>
       </div>

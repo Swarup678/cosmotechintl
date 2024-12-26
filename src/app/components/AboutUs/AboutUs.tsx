@@ -12,6 +12,7 @@ const AboutUs = () => {
           background: 'linear-gradient(to top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url("/images/growth.jpg") no-repeat',
           backgroundSize: 'cover',
           backgroundPosition: 'center center',
+          position: "relative",
         }}>
         <div className="mission-vision-text">
           <div className="mission">

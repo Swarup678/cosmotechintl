@@ -54,12 +54,12 @@ const HeroSection: React.FC = () => {
         <motion.div
           className="image-content"
           initial={{ opacity: 0, y: 0 }}
-          animate={{ opacity: 1, y: [ 0, -10, 10, 0 ] }}
+          animate={{ opacity: 1, y: [ '-10px', '10px' ] }}
           transition={{
             y:{
-            duration: 3, 
+            duration: 2, 
             repeat: Infinity,
-            repeatType: "loop",
+            repeatType: "mirror",
             ease: "easeInOut",
           }
           }}
