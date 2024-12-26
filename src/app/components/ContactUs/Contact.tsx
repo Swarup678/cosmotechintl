@@ -42,7 +42,7 @@ const Contact = () => {
                 width={24}
                 height={24}
               />
-              <p>92 Cherry Drive Uniondale, NY 11553</p>
+              <p>Tinkune ,Kathmandu</p>
             </div>
             <div className="infoItem">
               <Image
@@ -51,7 +51,7 @@ const Contact = () => {
                 width={24}
                 height={24}
               />
-              <p>lorem@ipsum.com</p>
+              <p>cosmotech.com</p>
             </div>
             <div className="infoItem">
               <Image

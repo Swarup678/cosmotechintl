@@ -20,7 +20,7 @@
 body {
   margin: 0;
   padding: 0;
-  /* background:linear-gradient(90deg, #cdcccb 50%, #000000 50%); */
+  background:linear-gradient(180deg, #88dbe0 60%, #4d5355 40%);
   /* background-blend-mode: multiply; Optional for blending */
   min-height: 100vh;
   overflow-y: scroll; /* Ensure scroll is enabled */
