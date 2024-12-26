@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
 import './HeroSection.css';
+import { MovingBorderDemo } from '../movingborder/movingborder';
 
 const HeroSection: React.FC = () => {
   return (
@@ -45,7 +46,7 @@ const HeroSection: React.FC = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.8, ease: 'easeOut' }}
             >
-              <Link href="#services" className='explore-services'>Explore Services</Link>
+              <Link href="#services" className='explore-services'><MovingBorderDemo /></Link>
             </motion.div>
           </div>
         </div>

@@ -2,6 +2,11 @@
 
 import HeroSection from "./components/herosection/HeroSection";
 import FeaturesSection from "./components/FeatureSection/FeatureSection";
+import AboutUs from "./components/AboutUs/AboutUs";
+import { VoiceOFSuccess } from "./components/voiceofsucess/voiceofsuccess";
+import Contact from "./components/ContactUs/Contact";
+import { WorldMapDemo } from "./components/worldmap/worldmap";
+import { Footer } from "./components/footer/footer";
 
 export default function Home() {
   return (
@@ -9,6 +14,11 @@ export default function Home() {
       {/* <Navbar /> */}
       <HeroSection/>
       <FeaturesSection/>
+      <WorldMapDemo/>
+      <AboutUs/>
+      <VoiceOFSuccess/>
+      <Contact/>
+      <Footer/>
     </div>
   );
 }

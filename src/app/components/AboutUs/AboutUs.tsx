@@ -6,34 +6,7 @@ const AboutUs = () => {
     <div className="about-us-container">
 
       {/* Mission & Vision */}
-      <section
-        className="mission-vision"
-        style={{
-          background: 'linear-gradient(to top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url("/images/growth.jpg") no-repeat',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center center',
-        }}>
-        <div className="mission-vision-text">
-          <div className="mission">
-            <h2>Our Mission</h2>
-            <p>
-              At Cosmotech International, we are driven by a passion to innovate and
-              provide technology solutions that drive growth, efficiency, and
-              transformation. Our mission is to empower businesses to reach their
-              full potential.
-            </p>
-          </div>
-
-          <div className="vision">
-            <h2>Our Vision</h2>
-            <p>
-              We aim to be a global leader in tech solutions, shaping the future
-              with sustainable, cutting-edge technologies. Together, we will build a
-              smarter, more efficient world.
-            </p>
-          </div>
-        </div>
-      </section >
+    
 
       {/* Expertise Section */}
       < section className="expertise" >
