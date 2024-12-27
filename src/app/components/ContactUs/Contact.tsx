@@ -6,7 +6,7 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div className="main">
+    <div className="main" id="contact">
       <div className="container">
         <h1 className="title">Contact Us</h1>
         <p className="subtitle">We’d love to hear from you!</p>
@@ -42,7 +42,7 @@ const Contact = () => {
                 width={24}
                 height={24}
               />
-              <p>92 Cherry Drive Uniondale, NY 11553</p>
+              <p>Tinkune ,Kathmandu</p>
             </div>
             <div className="infoItem">
               <Image
@@ -51,7 +51,7 @@ const Contact = () => {
                 width={24}
                 height={24}
               />
-              <p>lorem@ipsum.com</p>
+              <p>cosmotech.com</p>
             </div>
             <div className="infoItem">
               <Image

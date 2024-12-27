@@ -5,7 +5,7 @@ $secondary-color: #00aaff;
 .about-us-container {
   width: 100%;
   font-family: 'Arial', sans-serif;
-  margin: 20px 0;
+  margin-bottom: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -13,7 +13,6 @@ $secondary-color: #00aaff;
 
 /* Mission & Vision */
 .mission-vision {
-  // text-align: center;
   color: #333;
   height: 100vh;
   width: 100%;
@@ -54,10 +53,9 @@ $secondary-color: #00aaff;
 
 /* Expertise Section */
 .expertise {
-  margin-bottom: 20px;
-
   h2 {
     text-align: center;
+    // border: 1px solid;
     font-size: 2.5rem;
     font-weight: bold;
     margin: 20px 0;

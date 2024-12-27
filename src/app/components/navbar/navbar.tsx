@@ -9,19 +9,16 @@ interface link {
 
 const links: link[] = [
     {
-        name: "Home", href: "/home"
+        name: "Home", href: "#home"
     },
     {
-        name: "Features", href: "/features"
+        name: "Features", href: "#features"
     },
     {
-        name: "FAQs", href: "/faq"
+        name: "About", href: "#about"
     },
     {
-        name: "About", href: "/about"
-    },
-    {
-        name: "Contact", href: "/contact"
+        name: "Contact", href: "#contact"
     },
 ];
 
@@ -30,7 +27,7 @@ export default function navbar() {
         <div className="nav-container">
             <Link
                 className="logo-container"
-                href="/">
+                href="#home">
                 <Image
                     className='logo'
                     src="/assets/cosmotech1.png"

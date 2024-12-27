@@ -1,12 +1,15 @@
 .main {
   position: relative;
+  width: 100%;
   min-height: 100vh;
-  background: url("/assets/contact2.avif") no-repeat;
-  background-size: cover;
+  background: url("/assets/contact4.avif") no-repeat center center/cover;
   display: flex;
+  -o-object-fit: cover;
+     object-fit: cover;
   justify-content: center;
   align-items: center;
   z-index: 1;
+  margin-top: 20px;
 }
 
 .container {
@@ -94,20 +97,13 @@
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
 .inputGroup textarea {
-  width: 80%;
-  /* Make it take up full width */
-  height: 100px;
-  /* Set a specific height */
-  padding: 1rem;
-  /* Add padding inside the textarea */
-  border: 2px solid #ccc;
-  /* Add border */
-  border-radius: 4px;
-  /* Rounded corners */
-  font-size: small;
-  /* Set font size */
-  font-family: "Arial", sans-serif;
-  /* Set font */
+  width: 80%; /* Make it take up full width */
+  height: 100px; /* Set a specific height */
+  padding: 1rem; /* Add padding inside the textarea */
+  border: 2px solid #ccc; /* Add border */
+  border-radius: 4px; /* Rounded corners */
+  font-size: small; /* Set font size */
+  font-family: "Arial", sans-serif; /* Set font */
   resize: vertical;
 }
 .inputGroup textarea:focus {
@@ -129,6 +125,7 @@
 }
 
 .button {
+  width: 80%;
   padding: 0.8rem 1.5rem;
   background-color: #8e44ad;
   color: #ffffff;

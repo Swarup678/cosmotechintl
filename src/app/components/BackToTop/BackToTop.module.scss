@@ -1,0 +1,26 @@
+$button-size: 55px;
+$button-color: #145874;
+$arrow-color: #fff;
+
+.top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: $button-size;
+    height: $button-size;
+    background: $button-color;
+    border-radius: 20% 50%;
+    color: $arrow-color;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+
+    // Hover effect
+    &:hover {
+        background: darken($button-color, 10%);
+    }
+}

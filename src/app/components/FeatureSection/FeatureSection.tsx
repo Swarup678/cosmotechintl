@@ -7,7 +7,7 @@ import Link from 'next/link'; // For navigation
 
 const FeaturesSection: React.FC = () => {
   return (
-    <section className="features-section">
+    <section className="features-section" id="features">
       <h2 className="section-title">Why Choose Cosmotech ?</h2>
       <div className="features-cards">
         {/* Card 1 */}
@@ -44,7 +44,7 @@ const FeaturesSection: React.FC = () => {
         </motion.div>
       </div>
 
-      <div className="cta">
+      <div className="cta" id="about">
         <Link href="#contact" className='cta-button'>
           Get in Touch
         </Link>

@@ -1,0 +1,20 @@
+.top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  background: #145874;
+  border-radius: 20% 50%;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+}
+.top:hover {
+  background: #0d3749;
+}/*# sourceMappingURL=BackToTop.module.css.map */

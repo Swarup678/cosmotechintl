@@ -2,7 +2,7 @@
 .about-us-container {
   width: 100%;
   font-family: "Arial", sans-serif;
-  margin: 20px 0;
+  margin-bottom: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -42,9 +42,6 @@
 }
 
 /* Expertise Section */
-.expertise {
-  margin-bottom: 20px;
-}
 .expertise h2 {
   text-align: center;
   font-size: 2.5rem;
