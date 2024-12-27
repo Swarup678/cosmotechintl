@@ -2,7 +2,6 @@
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background: url("/assets/contact4.avif") no-repeat center center/cover;
   display: flex;
   -o-object-fit: cover;
      object-fit: cover;
@@ -25,7 +24,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #1d2529, #1abc9c, #8e44ad, #f39c12);
+  background: linear-gradient(135deg, #1d2529, #1abc9c, #8e44ad, #a9d7da);
   background-size: 400% 400%;
   animation: gradientMove 8s ease infinite;
   z-index: -1;
@@ -125,8 +124,8 @@
 }
 
 .button {
-  width: 80%;
-  padding: 0.8rem 1.5rem;
+  width: 40%;
+  padding: 12px 20px;
   background-color: #8e44ad;
   color: #ffffff;
   border: none;

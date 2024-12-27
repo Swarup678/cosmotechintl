@@ -1,20 +1,20 @@
 .footer {
   margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
   color: white;
   font-family: "Arial", sans-serif;
   position: relative;
-  padding-bottom: 2rem;
-  /* Ensuring visibility of footer */
-  /* Make sure the footer's background is visible */
+  height: 80%;
 }
 .footer .footer-wave {
   position: absolute;
-  top: -60px; /* Adjust this to make the wave appear higher */
+  top: -60px;
   left: 0;
   width: 100%;
   overflow: hidden;
-  height: 100px; /* Adjust this height for the wave size */
-  z-index: 1; /* Ensure wave is behind footer content */
+  height: 100px;
+  z-index: 1;
 }
 .footer .footer-wave svg {
   display: block;
@@ -22,7 +22,7 @@
   height: 100%;
 }
 .footer .footer-wave path {
-  fill: #000000; /* Changed to white for testing visibility */
+  fill: #000000;
 }
 .footer .footer-container {
   background: linear-gradient(180deg, #000000 15%, #171818 40%);
@@ -31,34 +31,53 @@
   justify-content: space-between;
   align-items: flex-start;
   gap: 2rem;
-  padding-top: 80px; /* Adjust this to align with wave's height */
+  padding: 35px 20px;
 }
 .footer .footer-branding {
+  flex: 1;
   max-width: 300px;
-  margin-top: 13px;
-  margin-left: 12px;
 }
 .footer .footer-branding .footer-logo {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #38bdf8; /* Highlight color for logo */
-  margin-bottom: 0.5rem;
+  color: #38bdf8;
+  margin-bottom: 1rem;
 }
 .footer .footer-branding .footer-description {
   font-size: 1rem;
   line-height: 1.6;
   color: #cbd5e1;
+  margin-bottom: 1rem;
+}
+.footer .footer-branding .footer-social h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #38bdf8;
+  text-transform: uppercase;
+}
+.footer .footer-branding .footer-social .footer-icons {
+  display: flex;
+  gap: 1.5rem;
+}
+.footer .footer-branding .footer-social .footer-icons a {
+  font-size: 2rem;
+  color: #cbd5e1;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.footer .footer-branding .footer-social .footer-icons a:hover {
+  transform: scale(1.2);
+  color: #38bdf8;
 }
 .footer .footer-links {
-  margin-left: 200px;
-  margin-top: 35px;
-  margin-bottom: -5px;
   flex: 1;
+  padding: 15px;
+  margin-left: 150px;
+  width: 250px;
 }
 .footer .footer-links h3 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
-  color: #38bdf8; /* Highlight color for section heading */
+  color: #38bdf8;
   text-transform: uppercase;
 }
 .footer .footer-links ul {
@@ -77,36 +96,21 @@
 .footer .footer-links ul li a:hover {
   color: #38bdf8;
 }
-.footer .footer-social {
+.footer .footer-map {
   flex: 1;
-  margin-top: 25px;
+  margin-left: 250px;
 }
-.footer .footer-social h3 {
+.footer .footer-map h3 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
-  color: #38bdf8; /* Highlight color for section heading */
+  color: #38bdf8;
   text-transform: uppercase;
 }
-.footer .footer-social .footer-icons {
-  display: flex;
-  gap: 1.5rem;
-}
-.footer .footer-social .footer-icons a {
-  font-size: 2rem;
-  color: #cbd5e1;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-.footer .footer-social .footer-icons a:hover {
-  transform: scale(1.2);
-  color: #38bdf8;
+.footer .footer-map iframe {
+  border-radius: 8px;
 }
 .footer .footer-bottom {
   text-align: center;
-  padding-top: 1rem;
-  font-size: 0.9rem;
-  color: #cbd5e1;
-  border-top: 2px solid #252629;
-}
-.footer .footer-bottom p {
-  margin: 0;
+  padding: 20px;
+  border-top: 1px solid #333;
 }/*# sourceMappingURL=footer.css.map */

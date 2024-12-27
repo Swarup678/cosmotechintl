@@ -9,6 +9,9 @@ interface link {
 
 const links: link[] = [
     {
+        name: "Cosmotech ", href: "/home"
+    },
+    {
         name: "Home", href: "/home"
     },
     {

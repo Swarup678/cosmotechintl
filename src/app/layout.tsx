@@ -1,5 +1,6 @@
 import "./globals.css";
 import Navbar from "./components/navbar/navbar";
+import { FloatingNavDemo } from "./components/floatingnav/floatingnavbar";
 
 export default function RootLayout({
   children,
@@ -9,7 +10,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={``}>
-        <Navbar />
+        {/* <Navbar /> */}
+         <FloatingNavDemo/>
         {children}
       </body>
     </html>

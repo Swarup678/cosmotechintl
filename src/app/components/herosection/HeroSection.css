@@ -1,18 +1,12 @@
 .hero {
   position: relative;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 50px;
   height: 100vh;
-  background: url("/images/sky.png") no-repeat;
   background-size: cover;
-  -webkit-backdrop-filter: brightness(5%) saturate(80%);
-          backdrop-filter: brightness(5%) saturate(80%);
-  color: rgb(20, 88, 116);
   overflow: hidden;
   flex-wrap: wrap;
-  /* Allows content to wrap when in small screen */
 }
 .hero .content-wrapper {
   display: flex;
@@ -26,30 +20,27 @@
 .hero .text-content {
   flex: 1;
   padding-right: 20px;
-  margin-top: -175px;
+  margin-top: 75px;
   text-align: left;
   max-width: 50%;
-  /* Prevents overflow on smaller screens */
 }
 .hero .text-content .intro {
   font-size: 2.5rem;
   font-weight: 700;
-  color: white;
+  color: rgb(0, 0, 0);
   letter-spacing: 1px;
   line-height: 1.5;
   text-transform: uppercase;
   text-align: justify;
   margin-bottom: 15px;
-  opacity: 0;
 }
 .hero .text-content .description {
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 1.3rem;
   text-align: justify;
   line-height: 1.5;
   margin-bottom: 30px;
   font-weight: 400;
-  opacity: 0.8;
 }
 .hero .text-content .buttons {
   display: flex;
@@ -71,13 +62,14 @@
 .hero .text-content .buttons .secondaryButton:hover {
   transform: translateY(-5px);
   color: white;
+  color: rgb(27, 26, 26);
 }
 .hero .text-content .buttons .secondaryButton {
   margin-top: 16px;
   padding-top: 17px;
   background-color: rgb(206, 218, 223);
   height: 58px;
-  width: 183px;
+  width: 180px;
   border-radius: 2rem;
 }
 .hero .text-content .buttons .secondaryButton:hover {
@@ -91,9 +83,6 @@
 .hero .text-content .buttons .primaryButton {
   color: white;
 }
-.hero .text-content .buttons .primaryButton:hover .explore-services {
-  color: rgb(238, 235, 235);
-}
 .hero .text-content .buttons .primaryButton .explore-services {
   text-decoration: none;
   color: white;
@@ -101,117 +90,38 @@
 }
 .hero .image-content {
   flex: 1;
-  text-align: center;
   display: flex;
   justify-content: center;
-  position: absolute;
-  left: 60%;
-  max-width: 50%;
-  /* Prevents overflow on smaller screens */
+  position: relative;
   margin-top: -175px;
 }
 .hero .image-content .hero-image {
   width: 100%;
   max-width: 500px;
+  margin-top: 250px;
   border-radius: 10px;
   transform: rotate(10deg);
+  animation: float 6s ease-in-out infinite, rotate3D 8s linear infinite;
 }
-@media (max-width: 1024px) {
-  .hero {
-    padding: 40px;
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(10deg);
   }
-  .hero .content-wrapper {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+  50% {
+    transform: translateY(-15px) rotate(10deg);
   }
-  .hero .text-content {
-    text-align: center;
-    margin-top: -20px;
-    max-width: 80%;
-    /* Increase width for better readability on tablets */
-  }
-  .hero .image-content {
-    max-width: 100%;
-    /* Allow image to fill container */
-  }
-  .hero .intro {
-    font-size: 2rem;
-    /* Reduce font size for smaller screens */
-  }
-  .hero .description {
-    font-size: 1.2rem;
-    /* Adjust font size for smaller devices */
-  }
-  .hero .buttons {
-    flex-direction: column;
-    gap: 15px;
-  }
-  .hero .buttons .primaryButton,
-  .hero .buttons .secondaryButton {
-    width: 100%;
-    /* Buttons should take full width on mobile */
-    padding: 15px;
+  100% {
+    transform: translateY(0) rotate(10deg);
   }
 }
-@media (max-width: 768px) {
-  .hero {
-    padding: 20px;
-    /* Reduce padding for smaller screens */
-    height: auto;
-    /* Allow section to be dynamic on mobile screens */
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
+@keyframes rotate3D {
+  0% {
+    transform: perspective(1000px) rotateX(0) rotateY(0);
   }
-  .hero .content-wrapper {
-    flex-direction: column;
-    align-items: center;
+  50% {
+    transform: perspective(1000px) rotateX(10deg) rotateY(15deg);
   }
-  .hero .text-content {
-    max-width: 90%;
-    /* More flexible text content */
-    padding-right: 0;
-    margin-bottom: 20px;
-    /* Added spacing below text */
-  }
-  .hero .image-content {
-    max-width: 100%;
-    margin-top: 20px;
-  }
-  .hero .intro {
-    font-size: 1.8rem;
-    /* Further reduce font size for mobile */
-  }
-  .hero .description {
-    font-size: 1.1rem;
-    /* Adjust font size for mobile devices */
-  }
-  .hero .buttons {
-    flex-direction: column;
-    gap: 15px;
-  }
-  .hero .buttons .primaryButton,
-  .hero .buttons .secondaryButton {
-    width: 100%;
-    /* Buttons should take full width on mobile */
-    padding: 15px;
-  }
-}
-@media (max-width: 480px) {
-  .hero .intro {
-    font-size: 1.5rem;
-    /* Decrease intro text size even more for very small screens */
-  }
-  .hero .description {
-    font-size: 1rem;
-    /* Adjust description font size */
-  }
-  .hero .buttons .primaryButton,
-  .hero .buttons .secondaryButton {
-    padding: 12px;
-    font-size: 1rem;
-    /* Smaller buttons on small screens */
+  100% {
+    transform: perspective(1000px) rotateX(0) rotateY(0);
   }
 }/*# sourceMappingURL=HeroSection.css.map */

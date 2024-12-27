@@ -10,7 +10,7 @@ const AboutUs = () => {
 
       {/* Expertise Section */}
       < section className="expertise" >
-        <h2>Our Expertise</h2>
+        <h2 className="text-[#145874]">Our Expertise</h2>
         <div className="tech-icons">
           <div className="tech-icon">
             <div className="img-div">
@@ -52,7 +52,7 @@ const AboutUs = () => {
               <img src="/images/ui-ux.png" alt="ui-ux" />
             </div>
             <h3>UI/UX Design</h3>
-            <p>In web design, form and function should be in harmony. We believe in human-centered customer experiences across any ecosystem of digital products being developed, technology transformation or marketing efforts. Simply put, we design & build application interfaces that just work.</p>
+            <p>In web design, form and function should be in harmony. We believe in human-centered customer experiences across any ecosystem of digital products being developed, technology transformation or marketing efforts.</p>
           </div>
         </div>
       </section>

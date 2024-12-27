@@ -1,116 +1,77 @@
 .footer {
-   margin-top: 40px;
-    color: white;
-    font-family: "Arial", sans-serif;
-    position: relative;
-    padding-bottom: 2rem;
-  
-    /* Ensuring visibility of footer */
- /* Make sure the footer's background is visible */
-  
-    .footer-wave {
-      position: absolute;
-      top: -60px; /* Adjust this to make the wave appear higher */
-      left: 0;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-family: "Arial", sans-serif;
+  position: relative;
+  height: 80%;
+
+  .footer-wave {
+    position: absolute;
+    top: -60px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    height: 100px;
+    z-index: 1;
+
+    svg {
+      display: block;
       width: 100%;
-      overflow: hidden;
-      height: 100px; /* Adjust this height for the wave size */
-     
-      z-index: 1; /* Ensure wave is behind footer content */
-    
-      svg {
-        display: block;
-        width: 100%;
-        height: 100%;
-      }
-    
-      path {
-        fill: #000000; /* Changed to white for testing visibility */
-      }
+      height: 100%;
     }
-  
-    .footer-container {
-        background:linear-gradient(180deg, #000000 15%, #171818 40%);
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 2rem;
-      padding-top: 80px; /* Adjust this to align with wave's height */
+
+    path {
+      fill: #000000;
     }
-  
-    .footer-branding {
-      max-width: 300px;
-      margin-top: 13px;
-       margin-left: 12px;
-  
-      .footer-logo {
-       
-        font-size: 2.5rem;
-        font-weight: bold;
-        color: #38bdf8; /* Highlight color for logo */
-        margin-bottom: 0.5rem;
-      }
-  
-      .footer-description {
-        font-size: 1rem;
-        line-height: 1.6;
-        color: #cbd5e1;
-      }
+  }
+
+  .footer-container {
+    background: linear-gradient(180deg, #000000 15%, #171818 40%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 35px 20px;
+  }
+
+  .footer-branding {
+    flex: 1;
+    max-width: 300px;
+
+    .footer-logo {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #38bdf8;
+      margin-bottom: 1rem;
     }
-  
-    .footer-links {
-        margin-left: 200px;
-        margin-top: 35px;
-        margin-bottom: -5px;
-      flex: 1;
-      h3 {
-        font-size: 1.2rem;
-        margin-bottom: 1rem;
-        color: #38bdf8; /* Highlight color for section heading */
-        text-transform: uppercase;
-      }
-  
-      ul {
-        list-style: none;
-        padding: 0;
-  
-        li {
-          margin: 0.5rem 0;
-  
-          a {
-            text-decoration: none;
-            color: #cbd5e1;
-            font-size: 1rem;
-            transition: color 0.3s ease;
-  
-            &:hover {
-              color: #38bdf8;
-            }
-          }
-        }
-      }
+
+    .footer-description {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #cbd5e1;
+      margin-bottom: 1rem;
     }
-  
+
     .footer-social {
-      flex: 1;
-      margin-top: 25px;
       h3 {
         font-size: 1.2rem;
         margin-bottom: 1rem;
-        color: #38bdf8; /* Highlight color for section heading */
+        color: #38bdf8;
         text-transform: uppercase;
       }
-  
+
       .footer-icons {
         display: flex;
         gap: 1.5rem;
-  
+
         a {
           font-size: 2rem;
           color: #cbd5e1;
           transition: transform 0.3s ease, color 0.3s ease;
-  
+
           &:hover {
             transform: scale(1.2);
             color: #38bdf8;
@@ -118,18 +79,66 @@
         }
       }
     }
-  
-    .footer-bottom {
-      text-align: center;
-      padding-top: 1rem;
-      font-size: 0.9rem;
-      color: #cbd5e1;
-      border-top: 2px solid #252629;
-      
-  
-      p {
-        margin: 0;
+  }
+
+  .footer-links {
+    flex: 1;
+    padding:15px;
+    margin-left: 150px;
+    width: 250px;
+    
+    
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      color: #38bdf8;
+      text-transform: uppercase;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin: 0.5rem 0;
+
+        a {
+          text-decoration: none;
+          color: #cbd5e1;
+          font-size: 1rem;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: #38bdf8;
+          }
+        }
       }
     }
   }
-  
+
+  .footer-map {
+    flex: 1;
+    margin-left: 250px;
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      color: #38bdf8;
+      text-transform: uppercase;
+   
+     
+
+    }
+
+    iframe {
+      border-radius: 8px;
+     // margin-left: 360px;
+    }
+  }
+
+  .footer-bottom {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #333;
+    
+  }
+}

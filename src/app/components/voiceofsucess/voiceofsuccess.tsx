@@ -8,7 +8,7 @@ export function VoiceOFSuccess() {
     <div className="h-[42rem] w-full relative flex flex-col items-center justify-center overflow-hidden">
       {/* Gradient Background */}
       <div
-        className="absolute inset-0 bg-gradient-to-r from-black/[0.3] via-[#145874] to-black/[0.3] z-0"
+        className="absolute inset-0 bg-gradient-to-r from-[#CACCD1] to-[#F3F4F7]"
       ></div>
 
       {/* Grid Overlay */}

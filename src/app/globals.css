@@ -20,7 +20,8 @@
 body {
   margin: 0;
   padding: 0;
-  background:linear-gradient(180deg, #88dbe0 60%, #4d5355 40%);
+  background-color: #b1e0f0 ;
+  background : linear-gradient(to right, #CACCD1,#F3F4F7 );
   /* background-blend-mode: multiply; Optional for blending */
   min-height: 100vh;
   overflow-y: scroll; /* Ensure scroll is enabled */
@@ -28,7 +29,7 @@ body {
 
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
-  width: 9px; /* width of the scrollbar */
+  width: 7px; /* width of the scrollbar */
 }
 
 ::-webkit-scrollbar-track {

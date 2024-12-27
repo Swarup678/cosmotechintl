@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -9,62 +9,39 @@ import { MovingBorderDemo } from '../movingborder/movingborder';
 const HeroSection: React.FC = () => {
   return (
     <section className="hero">
+      {/* Ensure space below the navbar */}
       <div className="content-wrapper">
-        {/* Text Content with animations */}
+        {/* Text Content */}
         <div className="text-content">
-          <motion.p
-            className="intro"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: 'easeOut' }}
-          >
-           Turning Your Tech Woes Into Wows-One Click at a Time!
-          </motion.p>
+          <p className="intro">
+            Turning Your Tech Woes Into Wows-One Click at a Time!
+          </p>
 
-          <motion.p
-            className="description"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.3, ease: 'easeOut' }}
-          >
+          <p className="description">
             At CosmoTech, we’re the caffeine your business needs—always awake, always ahead. Fixing bugs, building solutions, or making tech behave, we turn ‘oh no’ into ‘oh wow!’ Let’s rewrite your story, minus the errors!
-          </motion.p>
+          </p>
 
           <div className="buttons">
-            <motion.div
-              className="secondaryButton"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.6, ease: 'easeOut' }}
-            >
-              <Link href="#about" className='learn-more'>Learn More</Link>
-            </motion.div>
+            <div className="secondaryButton">
+              <Link href="#about" className="learn-more">
+                Learn More
+              </Link>
+            </div>
 
-            <motion.div
-              className="primaryButton"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.8, ease: 'easeOut' }}
-            >
-              <Link href="#services" className='explore-services'><MovingBorderDemo /></Link>
-            </motion.div>
+            <div className="primaryButton">
+              <Link href="#services" className="explore-services">
+                <MovingBorderDemo />
+              </Link>
+            </div>
           </div>
         </div>
 
         {/* Image Content */}
         <motion.div
           className="image-content"
-          initial={{ opacity: 0, y: 0 }}
-          animate={{ opacity: 1, y: [ 0, -10, 10, 0 ] }}
-          transition={{
-            y:{
-            duration: 3, 
-            repeat: Infinity,
-            repeatType: "loop",
-            ease: "easeInOut",
-          }
-          }}
-          // transition={{ duration: 1, ease: 'easeOut' }}
+          initial={{ y: 0 }}
+          animate={{ y: [0, -20, 0] }}
+          transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
         >
           <Image
             src="/images/astronaut.png"

@@ -27,7 +27,8 @@ export default function WorldMap({
     radius: 0.22,
     color: theme === "dark" ? "#FFFFFF40" : "#00000040",
     shape: "circle",
-    backgroundColor: theme === "dark" ? "black" : "white",
+    // Set the gradient background for the map
+    backgroundColor: "url(#gradient-background)",
   });
 
   const projectPoint = (lat: number, lng: number) => {
@@ -46,10 +47,10 @@ export default function WorldMap({
   };
 
   return (
-    <div className="w-full aspect-[2/1] dark:bg-black bg-white rounded-lg  relative font-sans">
+    <div className="w-full aspect-[2/1] bg-gradient-to-r from-[#CACCD1] to-[#F3F4F7] rounded-lg relative font-sans">
       <Image
         src={`data:image/svg+xml;utf8,${encodeURIComponent(svgMap)}`}
-        className="h-full w-full [mask-image:linear-gradient(to_bottom,transparent,white_10%,white_90%,transparent)] pointer-events-none select-none"
+        className="h-full w-full pointer-events-none select-none"
         alt="world map"
         height="495"
         width="1056"
@@ -60,6 +61,14 @@ export default function WorldMap({
         viewBox="0 0 800 400"
         className="w-full h-full absolute inset-0 pointer-events-none select-none"
       >
+        {/* Define the gradient background */}
+        <defs>
+          <linearGradient id="gradient-background" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#CACCD1" />
+            <stop offset="100%" stopColor="#F3F4F7" />
+          </linearGradient>
+        </defs>
+
         {dots.map((dot, i) => {
           const startPoint = projectPoint(dot.start.lat, dot.start.lng);
           const endPoint = projectPoint(dot.end.lat, dot.end.lng);
